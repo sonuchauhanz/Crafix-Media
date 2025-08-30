@@ -73,7 +73,7 @@ class ContactForm {
         // Use production URL when deployed, local URL for development
         this.apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
             ? 'http://127.0.0.1:3000/api/contact'
-            : 'https://your-backend-domain.vercel.app/api/contact';
+            : 'https://crafix-media.vercel.app/api/contact'; // <-- Updated URL here
         this.init();
     }
     
