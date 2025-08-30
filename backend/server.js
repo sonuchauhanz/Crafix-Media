@@ -8,28 +8,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // CORS configuration
-const corsOptions = {
-    origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin) return callback(null, true);
-        
-        const allowedOrigins = [
-            'http://127.0.0.1:5500',
-            'http://localhost:5500',
-            process.env.CORS_ORIGIN
-        ].filter(Boolean);
-        
-        if (allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true,
-    optionsSuccessStatus: 200
-};
+app.use(cors({
+    origin: 'https://crafixmedia.netlify.app', // Netlify frontend ka URL
+    methods: ['POST', 'GET', 'OPTIONS'],
+    allowedHeaders: ['Content-Type'],
+}));
 
-app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
