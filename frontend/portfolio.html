@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - Crafix Media</title>
+    <meta name="description"
+        content="Explore our latest video editing work and see how we've helped brands tell their stories through powerful video content.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/logo/crafix media1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Marquee Bar -->
+    <div class="top-marquee-bar">
+        <marquee class="top-marquee" behavior="scroll" direction="right" scrollamount="7">
+            <span>Let's Collaborate! |</span>
+            <span>
+                <p style="display:inline; margin:0;"> Join Our Team | We Are Hiring !</p>
+                <a href="collaboration.html" class="top-apply-btn"> Join Us <i class="fas fa-arrow-right"></i></a>
+            </span>
+        </marquee>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/logo/crafix media logo png.png" alt="Crafix Media Logo" class="logo-icon">
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Get Started</a></li>
+                </ul>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary w-full">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-6">
+                    Our <span class="gradient-text">Portfolio</span>
+                </h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    Explore our latest work and see how we've helped brands tell their stories through powerful video
+                    content.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="pb-24">
+        <style>
+            .portfolio-carousel {
+                position: relative;
+                max-width: 400px;
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 20px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            }
+
+            .portfolio-videos-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                gap: 0;
+            }
+
+            .portfolio-video-wrapper {
+                min-width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .portfolio-video {
+                width: 100%;
+                height: 80vh;
+                max-height: 800px;
+                border-radius: 15px;
+                background: #000;
+                object-fit: cover;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .carousel-controls {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255, 255, 255, 0.9);
+                border: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+                color: #333;
+                transition: all 0.3s ease;
+                z-index: 10;
+            }
+
+            .carousel-controls:hover {
+                background: rgba(255, 255, 255, 1);
+                transform: translateY(-50%) scale(1.1);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .carousel-prev {
+                left: 20px;
+            }
+
+            .carousel-next {
+                right: 20px;
+            }
+
+            .carousel-indicators {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            .carousel-indicator {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #ddd;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .carousel-indicator.active {
+                background: #ff6b35;
+                transform: scale(1.2);
+            }
+
+
+
+            @media (max-width: 768px) {
+                .portfolio-video {
+                    height: 70vh;
+                }
+
+                .carousel-controls {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+
+                .carousel-prev {
+                    left: 10px;
+                }
+
+                .carousel-next {
+                    right: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .portfolio-video {
+                    height: 60vh;
+                }
+
+                .carousel-controls {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 14px;
+                }
+            }
+        </style>
+
+        <div class="container">
+            <div class="portfolio-carousel">
+
+                <button class="carousel-controls carousel-prev" onclick="prevVideo()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button class="carousel-controls carousel-next" onclick="nextVideo()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="portfolio-videos-container" id="portfolioCarousel">
+                    <!-- <div class="portfolio-video-wrapper">
+                        <video controls class="portfolio-video">
+                            <source src="assets/portfolio/1024X768.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div> -->
+                    <div class="portfolio-video-wrapper">
+                        <video controls class="portfolio-video">
+                            <source src="assets/portfolio/1024X768(1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="portfolio-video-wrapper">
+                        <video controls class="portfolio-video">
+                            <source src="assets/portfolio/1024X768(2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="portfolio-video-wrapper">
+                        <video controls class="portfolio-video">
+                            <source src="assets/portfolio/1024X76844.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="carousel-indicators">
+                    <div class="carousel-indicator active" onclick="goToVideo(0)"></div>
+                    <div class="carousel-indicator" onclick="goToVideo(1)"></div>
+                    <div class="carousel-indicator" onclick="goToVideo(2)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentVideoIndex = 0;
+        const totalVideos = 3;
+        const carousel = document.getElementById('portfolioCarousel');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+
+        function updateCarousel() {
+            const translateX = -currentVideoIndex * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentVideoIndex);
+            });
+        }
+
+        function nextVideo() {
+            currentVideoIndex = (currentVideoIndex + 1) % totalVideos;
+            updateCarousel();
+        }
+
+        function prevVideo() {
+            currentVideoIndex = (currentVideoIndex - 1 + totalVideos) % totalVideos;
+            updateCarousel();
+        }
+
+        function goToVideo(index) {
+            currentVideoIndex = index;
+            updateCarousel();
+        }
+
+        // Auto-play next video every 10 seconds
+        setInterval(() => {
+            nextVideo();
+        }, 10000);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevVideo();
+            } else if (e.key === 'ArrowRight') {
+                nextVideo();
+            }
+        });
+    </script>
+
+    <!-- Testimonials -->
+    <section class="py-24 section-secondary">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">
+                    What Our <span class="gradient-text">Clients Say</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    Don't just take our word for it. Here's what our clients have to say about working with us.
+                </p>
+            </div>
+            <style>
+                .testimonial-row {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    gap: 1.2rem;
+                }
+
+                .testimonial-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 220px;
+                    flex: 1 1 180px;
+                }
+
+                .testimonial-box img {
+                    width: 100% !important;
+                    height: 100% !important;
+                    object-fit: cover !important;
+                    border-radius: 50% !important;
+                }
+
+                /* Adjust avatar wrapper size and text scales */
+                .testimonial-box>div[style*='border-radius: 50%'] {
+                    width: 140px !important;
+                    height: 140px !important;
+                    border-width: 3px !important;
+                    margin-top: 2rem !important;
+                }
+
+                .testimonial-box>div[style*='background: #fff; border: 3px solid orange']>div:nth-of-type(1) {
+                    font-size: 1.5rem !important;
+                }
+
+                .testimonial-box>div[style*='background: #fff; border: 3px solid orange']>div:nth-of-type(2) span {
+                    font-size: 1.2rem !important;
+                }
+
+                .testimonial-box>div[style*='background: #fff; border: 3px solid orange']>div:nth-of-type(3) {
+                    font-size: 0.95rem !important;
+                    line-height: 1.6 !important;
+                }
+
+                .testimonial-box>div:nth-of-type(3) {
+                    font-size: 1rem !important;
+                }
+
+                .testimonial-box>div:nth-of-type(4) {
+                    font-size: 0.85rem !important;
+                    color: #777 !important;
+                }
+
+                .testimonial-box>div[style*='background: #fff; border: 3px solid orange'] {
+                    padding: 0.9rem 0.9rem 1.6rem 0.9rem !important;
+                    font-size: 0.9rem !important;
+                }
+
+                @media (max-width: 1100px) {
+                    .testimonial-row {
+                        flex-wrap: wrap;
+                    }
+
+                    .testimonial-box {
+                        max-width: 300px;
+                        flex: 1 1 220px;
+                    }
+
+                    .testimonial-box img {
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: cover !important;
+                    }
+
+                    .testimonial-box>div[style*='border-radius: 50%'] {
+                        width: 150px !important;
+                        height: 150px !important;
+                    }
+                }
+
+                @media (max-width: 900px) {
+                    .testimonial-row {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .testimonial-box {
+                        max-width: 350px;
+                        flex: 1 1 300px;
+                    }
+
+                    .testimonial-box img {
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: cover !important;
+                    }
+
+                    .testimonial-box>div[style*='border-radius: 50%'] {
+                        width: 160px !important;
+                        height: 160px !important;
+                    }
+                }
+            </style>
+            <div class="testimonial-row">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-box">
+                    <div
+                        style="background: #fff; border: 3px solid orange; border-radius: 2rem; padding: 1.5rem 1.5rem 2.5rem 1.5rem; position: relative; margin-bottom: -2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 100%;">
+                        <div style="font-size: 2rem; color: orange; font-weight: bold;">&ldquo;</div>
+                        <div style="margin: 0.5rem 0; text-align: center;">
+                            <span style="color: gold; font-size: 1.5rem;">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                        </div>
+                        <div style="font-size: 1.1rem; color: #333; text-align: center; margin-top: 0.5rem;">
+                            "Working with Crafix Media was a very smooth experience. Professional approach, creative
+                            output, and a clear vision – these three things make me want to work with them again and
+                            again."
+                        </div>
+                        <div
+                            style="position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); width: 48px; height: 24px; background: #fff; border-bottom: 3px solid orange; border-radius: 0 0 24px 24px;">
+                        </div>
+                    </div>
+                    <div
+                        style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid orange; background: #fff; display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; overflow: hidden; position: relative;">
+                        <img src="assets/photos/BL MALI SAFALTA VISIONS.png" alt="Client Photo"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem; font-weight: bold; color: #333;">BL Mali</div>
+                    <div style="text-align: center; color: #888; font-size: 0.95rem;">Safalta Visions</div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-box">
+                    <div
+                        style="background: #fff; border: 3px solid orange; border-radius: 2rem; padding: 1.5rem 1.5rem 2.5rem 1.5rem; position: relative; margin-bottom: -2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 100%;">
+                        <div style="font-size: 2rem; color: orange; font-weight: bold;">&ldquo;</div>
+                        <div style="margin: 0.5rem 0; text-align: center;">
+                            <span style="color: gold; font-size: 1.5rem;">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                        </div>
+                        <div style="font-size: 1.1rem; color: #333; text-align: center; margin-top: 0.5rem;">
+                            "At first, we were worried whether they would understand our vision. But Sonu Chauhan and
+                            his team( Crafix Media ) delivered exactly what we imagined. They truly listen first, and
+                            then create something incredible."
+                        </div>
+                        <div
+                            style="position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); width: 48px; height: 24px; background: #fff; border-bottom: 3px solid orange; border-radius: 0 0 24px 24px;">
+                        </div>
+                    </div>
+                    <div
+                        style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid orange; background: #fff; display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; overflow: hidden; position: relative;">
+                        <img src="assets/photos/KISHAN DESAI  WORKABILITY.png" alt="Client Photo"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem; font-weight: bold; color: #333;">Kishan Desai
+                    </div>
+                    <div style="text-align: center; color: #888; font-size: 0.95rem;">WORKABILITY</div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-box">
+                    <div
+                        style="background: #fff; border: 3px solid orange; border-radius: 2rem; padding: 1.5rem 1.5rem 2.5rem 1.5rem; position: relative; margin-bottom: -2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 100%;">
+                        <div style="font-size: 2rem; color: orange; font-weight: bold;">&ldquo;</div>
+                        <div style="margin: 0.5rem 0; text-align: center;">
+                            <span style="color: gold; font-size: 1.5rem;">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                        </div>
+                        <div style="font-size: 1.1rem; color: #333; text-align: center; margin-top: 0.5rem;">
+                            "The team at Crafix Media completely transformed the way our brand looks. Their creativity
+                            and attention to detail are unmatched. Every project was delivered before the deadline, and
+                            the quality was top-notch."
+                        </div>
+                        <div
+                            style="position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); width: 48px; height: 24px; background: #fff; border-bottom: 3px solid orange; border-radius: 0 0 24px 24px;">
+                        </div>
+                    </div>
+                    <div
+                        style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid orange; background: #fff; display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; overflow: hidden; position: relative;">
+                        <img src="assets/photos/Mohini Desai THELEARNINGNEST.png" alt="Client Photo"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem; font-weight: bold; color: #333;">Mohini Desai
+                    </div>
+                    <div style="text-align: center; color: #888; font-size: 0.95rem;">THELEARNINGNEST</div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonial-box">
+                    <div
+                        style="background: #fff; border: 3px solid orange; border-radius: 2rem; padding: 1.5rem 1.5rem 2.5rem 1.5rem; position: relative; margin-bottom: -2.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 100%;">
+                        <div style="font-size: 2rem; color: orange; font-weight: bold;">&ldquo;</div>
+                        <div style="margin: 0.5rem 0; text-align: center;">
+                            <span style="color: gold; font-size: 1.5rem;">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                        </div>
+                        <div style="font-size: 1.1rem; color: #333; text-align: center; margin-top: 0.5rem;">
+                            "We got a product video made by Crafix Media, and honestly, it turned out to be a
+                            game-changer for us. The moment we launched it, our sales and audience engagement went up
+                            instantly."
+                        </div>
+                        <div
+                            style="position: absolute; left: 50%; bottom: -24px; transform: translateX(-50%); width: 48px; height: 24px; background: #fff; border-bottom: 3px solid orange; border-radius: 0 0 24px 24px;">
+                        </div>
+                    </div>
+                    <div
+                        style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid orange; background: #fff; display: flex; align-items: center; justify-content: center; margin-top: 2.5rem; overflow: hidden; position: relative;">
+                        <img src="assets/photos/Priya Chanda  SATYAM CLASSES.png" alt="Client Photo"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem; font-weight: bold; color: #333;">Priya Chanda
+                    </div>
+                    <div style="text-align: center; color: #888; font-size: 0.95rem;">SATYAM CLASSES</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24">
+        <div class="container text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-6">
+                    Ready to Create Your <span class="gradient-text">Masterpiece</span>?
+                </h2>
+                <p class="text-xl text-muted-foreground mb-12">
+                    Let's collaborate to bring your vision to life with stunning video content.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    Start Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919950096326" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <img src="assets/photos/whatsapp-icon.png" alt="WhatsApp" style="width:45px; height:45px;">
+    </a>
+
+    <script src="script/script.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo/crafix media logo png.png" alt="Crafix Media Logo" width="150">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1ELgaEWn4S/" aria-label="Facebook" title="Facebook"><i
+                            class="fab fa-facebook-f" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.linkedin.com/company/crafix-media/?viewAsMember=true" aria-label="LinkedIn"
+                        title="LinkedIn"><i class="fab fa-linkedin-in" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.youtube.com/@CrafixMedia" aria-label="YouTube" title="YouTube"><i
+                            class="fab fa-youtube" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.instagram.com/crafixmedia?igsh=OGJwZnFoNWNzMzA2" aria-label="Instagram"
+                        title="Instagram"><i class="fab fa-instagram" style="font-size: 1.25rem;"></i></a>
+                </div>
+            </div>
+            <div class="footercopyright">
+                <p>© 2023 Crafix Media. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

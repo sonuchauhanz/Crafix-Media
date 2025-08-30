@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Crafix Media</title>
+    <meta name="description"
+        content="Get in touch with VideoCraft to discuss your video editing project. We respond within 24 hours.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/logo/crafix media1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Top Marquee Bar -->
+    <div class="top-marquee-bar">
+        <marquee class="top-marquee" behavior="scroll" direction="right" scrollamount="7">
+            <span>Let's Collaborate! |</span>
+            <span>
+                <p style="display:inline; margin:0;"> Join Our Team | We Are Hiring !</p>
+                <a href="collaboration.html" class="top-apply-btn"> Join Us <i class="fas fa-arrow-right"></i></a>
+            </span>
+        </marquee>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/logo/crafix media logo png.png" alt="Crafix Media Logo" class="logo-icon">
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Get Started</a></li>
+                </ul>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary w-full">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-6">
+                    Let's <span class="gradient-text">Connect</span>
+                </h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    Ready To Bring Your Vision To Life? Get In Touch And Let's Create Something Extraordinary Together
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="pb-24">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div>
+                    <div class="card glass">
+                        <div class="card-content">
+                            <h2 class="text-3xl font-bold mb-2">
+                                Start Your <span class="gradient-text">Project</span>
+                            </h2>
+                            <p class="text-muted-foreground mb-6">
+                                Fill Out The Form Below And We'll Get Back To You Within 24 Hours
+                            </p>
+
+                            <form id="contact-form" class="space-y-6">
+                                <div class="grid grid-md-2 gap-4">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Full Name</label>
+                                        <input type="text" id="name" name="name" class="form-input"
+                                            placeholder="Your Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" id="email" name="email" class="form-input"
+                                            placeholder="Your Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company" class="form-label">Company / Organization (Optional)</label>
+                                    <input type="text" id="company" name="company" class="form-input"
+                                        placeholder="Company / Organization">
+                                </div>
+
+                                <div class="grid grid-md-2 gap-4">
+                                    <div class="form-group">
+                                        <label for="project" class="form-label">Project Type</label>
+                                        <select id="project" name="project" class="form-select">
+                                            <option value="">Select Project Type</option>
+                                            <option value="brand-video">Short Form Video Editing</option>
+                                            <option value="product-launch">Long Form Video Editing</option>
+                                            <option value="social-media">Thumbnail Design</option>
+                                            <option value="corporate-training">YT Channel Management</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="budget" class="form-label">Budget Range</label>
+                                        <select id="budget" name="budget" class="form-select">
+                                            <option value="">Select Budget Range</option>
+                                            <option value="under-100">Under $100</option>
+                                            <option value="100-200">$100 - $200</option>
+                                            <option value="200-300">$200 - $300</option>
+                                            <option value="300-400">$300 - $400</option>
+                                            <option value="500-plus">$500+</option>
+                                            <option value="discuss">Let's Discuss</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Project Details</label>
+                                    <textarea id="message" name="message" class="form-textarea" required
+                                        placeholder="Tell us about your project, goals, timeline, and any specific requirements..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg w-full">
+                                    <span>📧</span>
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="get-in-touch">
+                    <h2 class="text-3xl font-bold mb-2">
+                        Get in <span class="gradient-text">Touch</span>
+                    </h2>
+                    <p class="subtitle mb-6">
+                        Whether You're Looking To Create a Brand Video, Launch a Product, Or Tell Your Story, We're here
+                        to help bring your vision to life.
+                    </p>
+
+                    <div class="panel">
+                        <div class="items">
+                            <div class="item">
+                                <div class="icon">📞</div>
+                                <div>
+                                    <div class="label">Phone</div>
+                                    <a class="value" href="tel:+919950096326">+91 99500 96326</a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="icon">📧</div>
+                                <div>
+                                    <div class="label">Email</div>
+                                    <a class="value" href="mailto:hello@crafixmedia.com">hello@crafixmedia.com</a>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="icon">📍</div>
+                                <div>
+                                    <div class="label">Office</div>
+                                    <div class="value">Jaipur, Rajasthan</div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="icon">🕒</div>
+                                <div>
+                                    <div class="label">Business Hours</div>
+                                    <div class="value">24/7 Hours</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cta">
+                            <a href="tel:+919950096326" class="btn btn-primary">Call Now</a>
+                            <a href="mailto:hello@crafixmedia.com" class="btn btn-outline">Email Us</a>
+                        </div>
+
+                        <p class="note">We respond to all inquiries within 24 hours. For urgent projects, we often reply
+                            within a few hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919950096326" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <img src="assets/photos/whatsapp-icon.png" alt="WhatsApp" style="width:45px; height:45px;">
+    </a>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+        })();
+    </script>
+    <script src="script/script.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo/crafix media logo png.png" alt="Crafix Media Logo" width="150">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1ELgaEWn4S/" aria-label="Facebook" title="Facebook"><i
+                            class="fab fa-facebook-f" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.linkedin.com/company/crafix-media/?viewAsMember=true" aria-label="LinkedIn"
+                        title="LinkedIn"><i class="fab fa-linkedin-in" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.youtube.com/@CrafixMedia" aria-label="YouTube" title="YouTube"><i
+                            class="fab fa-youtube" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.instagram.com/crafixmedia?igsh=OGJwZnFoNWNzMzA2" aria-label="Instagram"
+                        title="Instagram"><i class="fab fa-instagram" style="font-size: 1.25rem;"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2023 Crafix Media. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

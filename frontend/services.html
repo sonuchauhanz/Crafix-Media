@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Crafix Media</title>
+    <meta name="description"
+        content="Professional video editing services including color grading, motion graphics, audio production, and social media optimization.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/logo/crafix media1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+    <style>
+        /* Roadmap styles (scoped to services page) */
+        .roadmap {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0.5rem 0 0.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 3rem;
+        }
+
+        .roadmap-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .roadmap-item {
+            position: relative;
+            width: 50%;
+        }
+
+        .roadmap-item .content {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 153, 57, 0.35);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            backdrop-filter: blur(6px);
+        }
+
+        .roadmap-item.left {
+            justify-self: start;
+            padding-right: 2.75rem;
+            text-align: right;
+        }
+
+        .roadmap-item.right {
+            justify-self: end;
+            padding-left: 2.75rem;
+            text-align: left;
+        }
+
+        .roadmap-item .dot {
+            position: absolute;
+            top: 50%;
+            width: 14px;
+            height: 14px;
+            background: var(--gradient-hero);
+            border-radius: 50%;
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-50%);
+        }
+
+        .roadmap-item.left .dot {
+            right: -7px;
+        }
+
+        .roadmap-item.right .dot {
+            left: -7px;
+        }
+
+        .roadmap-step {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 9999px;
+            background: var(--gradient-hero);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .roadmap-title {
+            margin: 0.5rem 0 0.25rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--foreground);
+        }
+
+        .roadmap-desc {
+            color: var(--muted-foreground);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 767px) {
+            .roadmap-line {
+                left: 0.75rem;
+                transform: none;
+            }
+
+            .roadmap-item {
+                width: 100%;
+            }
+
+            .roadmap-item.left,
+            .roadmap-item.right {
+                justify-self: stretch;
+                text-align: left;
+                padding: 0 0 0 2rem;
+            }
+
+            .roadmap-item .dot {
+                left: 0.75rem;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Marquee Bar -->
+    <div class="top-marquee-bar">
+        <marquee class="top-marquee" behavior="scroll" direction="right" scrollamount="7">
+            <span>Let's Collaborate! |</span>
+            <span>
+                <p style="display:inline; margin:0;"> Join Our Team | We Are Hiring !</p>
+                <a href="collaboration.html" class="top-apply-btn"> Join Us <i class="fas fa-arrow-right"></i></a>
+            </span>
+        </marquee>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/logo/crafix media logo png.png" alt="Crafix Media Logo" class="logo-icon">
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">Get Started</a></li>
+                </ul>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary w-full">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-6">
+                    Our <span class="gradient-text">Services</span>
+                </h1>
+                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                    We Craft Powerful Stories With Creativity, Strategy, And Technology To Help Your Brand Stand Out And
+                    Connect With The Right Audience
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="pb-24">
+        <div class="container">
+            <div class="services-grid grid gap-8">
+                <!-- Video Editing -->
+                <div class="card glass hover-lift transition-smooth">
+                    <div class="card-content">
+                        <img src="assets/photos/shortform.png" alt="Short Form Video Editing"
+                            class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold text-foreground mb-3">Short Form Video Editing</h3>
+                        <p class="text-muted-foreground mb-4">YT Shorts, Tik Tok & Reels</p>
+                    </div>
+                </div>
+
+                <!-- Color Grading -->
+                <div class="card glass hover-lift transition-smooth">
+                    <div class="card-content">
+                        <img src="assets/photos/longform.png" alt="Long Form Video Editing"
+                            class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold text-foreground mb-3">Long Form Video Editing</h3>
+                        <p class="text-muted-foreground mb-4">YT Video & Other Long Form Content Editing</p>
+                    </div>
+                </div>
+
+                <!-- Motion Graphics -->
+                <div class="card glass hover-lift transition-smooth">
+                    <div class="card-content">
+                        <img src="assets/photos/ytthumbanil.png" alt="Thumbnail Design"
+                            class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold text-foreground mb-3">Thumbnail Design</h3>
+                        <p class="text-muted-foreground mb-4">Higher Click Through Rate Thumbnail</p>
+                    </div>
+                </div>
+
+                <!-- Audio Production -->
+                <div class="card glass hover-lift transition-smooth">
+                    <div class="card-content">
+                        <img src="assets/photos/ytmanagement.png" alt="YT Channel Management"
+                            class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-2xl font-semibold text-foreground mb-3">YT Channel Management</h3>
+                        <p class="text-muted-foreground mb-4">Content Strategy, SEO, Monetization, Analytics to Grow
+                            Your Channel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 section-secondary">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">
+                    Our <span class="gradient-text">Process</span>
+                </h2>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    A streamlined workflow designed to deliver exceptional results efficiently.
+                </p>
+            </div>
+
+            <div class="roadmap">
+                <div class="roadmap-line"></div>
+
+                <div class="roadmap-item left">
+                    <span class="dot"></span>
+                    <div class="content">
+                        <div class="roadmap-step">01</div>
+                        <h3 class="roadmap-title">Discovery Call</h3>
+                        <p class="roadmap-desc">We discuss your vision, goals, and project requirements in detail.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item right">
+                    <span class="dot"></span>
+                    <div class="content">
+                        <div class="roadmap-step">02</div>
+                        <h3 class="roadmap-title">Strategy & Planning</h3>
+                        <p class="roadmap-desc">We create a detailed plan and timeline for your project.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item left">
+                    <span class="dot"></span>
+                    <div class="content">
+                        <div class="roadmap-step">03</div>
+                        <h3 class="roadmap-title">Production</h3>
+                        <p class="roadmap-desc">Our team works their magic, keeping you updated throughout.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item right">
+                    <span class="dot"></span>
+                    <div class="content">
+                        <div class="roadmap-step">04</div>
+                        <h3 class="roadmap-title">Review & Refine</h3>
+                        <p class="roadmap-desc">We incorporate your feedback to perfect the final product.</p>
+                    </div>
+                </div>
+
+                <div class="roadmap-item left">
+                    <span class="dot"></span>
+                    <div class="content">
+                        <div class="roadmap-step">05</div>
+                        <h3 class="roadmap-title">Delivery</h3>
+                        <p class="roadmap-desc">You receive your polished video in all required formats.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24">
+        <div class="container text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-6">
+                    Ready to Get <span class="gradient-text">Started</span>?
+                </h2>
+                <p class="text-xl text-muted-foreground mb-12">
+                    Let's discuss your project and create something amazing together.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        Start Your Project
+                        <span>→</span>
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline btn-lg">
+                        Schedule a Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919950096326" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <img src="assets/photos/whatsapp-icon.png" alt="WhatsApp" style="width:45px; height:45px;">
+    </a>
+
+    <script src="script/script.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo/crafix media logo png.png" alt="Crafix Media Logo" width="150">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1ELgaEWn4S/" aria-label="Facebook" title="Facebook"><i
+                            class="fab fa-facebook-f" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.linkedin.com/company/crafix-media/?viewAsMember=true" aria-label="LinkedIn"
+                        title="LinkedIn"><i class="fab fa-linkedin-in" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.youtube.com/@CrafixMedia" aria-label="YouTube" title="YouTube"><i
+                            class="fab fa-youtube" style="font-size: 1.25rem;"></i></a>
+                    <a href="https://www.instagram.com/crafixmedia?igsh=OGJwZnFoNWNzMzA2" aria-label="Instagram"
+                        title="Instagram"><i class="fab fa-instagram" style="font-size: 1.25rem;"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2023 Crafix Media. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
